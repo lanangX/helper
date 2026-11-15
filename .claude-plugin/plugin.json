@@ -1,0 +1,13 @@
+{
+  "name": "helper",
+  "displayName": "Helper",
+  "version": "1.0.0",
+  "description": "Dua skill untuk developer yang aktif di komunitas online: discussion-helper menyusun balasan, content-helper membuat konten. Masing-masing dalam dua jalur (Valid dan Standard) dan dua gaya.",
+  "author": {
+    "name": "Pawang Dev"
+  },
+  "homepage": "https://github.com/lanangX/helper",
+  "repository": "https://github.com/lanangX/helper",
+  "license": "MIT",
+  "keywords": ["discussion", "content", "community", "writing", "indonesian"]
+}

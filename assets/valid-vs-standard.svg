@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" role="img" aria-labelledby="t d">
+  <title id="t">Valid dan Standard</title>
+  <desc id="d">Tiga klaim diperiksa. Jalur Valid hanya menyimpan klaim yang punya sumber dan membuang yang tidak. Jalur Standard menyimpan semuanya dan menandai klaim yang belum terverifikasi.</desc>
+  <style>
+    text { font-family: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif; }
+    .row  { fill: #0b1f1e; stroke: #134e4a; stroke-width: 2; }
+    .lbl  { fill: #e6fffb; font-size: 17px; }
+    .tag  { font-size: 14px; }
+    .r1   { animation: r1 10s ease-out infinite; }
+    .r2   { animation: r2 10s ease-out infinite; }
+    .r3   { animation: r3 10s ease-out infinite; }
+    .r3v  { animation: r3v 10s ease-out infinite; opacity: 0.45; }
+    .strike { transform-box: fill-box; transform-origin: left center; transform: scaleX(1); animation: strike 10s ease-out infinite; }
+    .amber { animation: amber 10s ease-in-out infinite; }
+    .cap  { animation: cap 10s ease-out infinite; }
+    .reco { animation: reco 10s ease-out infinite; }
+    @keyframes r1 { 0%,6% { opacity: 0; transform: translateY(12px); } 14%,92% { opacity: 1; transform: none; } 100% { opacity: 0; } }
+    @keyframes r2 { 0%,18% { opacity: 0; transform: translateY(12px); } 26%,92% { opacity: 1; transform: none; } 100% { opacity: 0; } }
+    @keyframes r3 { 0%,30% { opacity: 0; transform: translateY(12px); } 38%,92% { opacity: 1; transform: none; } 100% { opacity: 0; } }
+    @keyframes r3v { 0%,30% { opacity: 0; transform: translateY(12px); } 38%,46% { opacity: 1; transform: none; } 54%,92% { opacity: 0.45; transform: none; } 100% { opacity: 0; } }
+    @keyframes strike { 0%,46% { transform: scaleX(0); } 54%,100% { transform: scaleX(1); } }
+    @keyframes amber { 0%,46% { stroke: #134e4a; } 54%,92% { stroke: #fbbf24; } 100% { stroke: #134e4a; } }
+    @keyframes cap  { 0%,58% { opacity: 0; } 66%,92% { opacity: 1; } 100% { opacity: 0; } }
+    @keyframes reco { 0%,72% { opacity: 0; transform: translateY(8px); } 80%,92% { opacity: 1; transform: none; } 100% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+
+  <rect width="1200" height="440" rx="28" fill="#071a19"/>
+  <text x="60" y="54" font-size="28" font-weight="700" fill="#ffffff">Valid vs Standard</text>
+  <text x="1140" y="52" font-size="16" fill="#5f9a93" text-anchor="end">Contoh ilustrasi, bukan fakta aktual</text>
+
+  <!-- ===== panel Valid ===== -->
+  <rect x="40" y="80" width="540" height="290" rx="22" fill="#0a2523" stroke="#14532d" stroke-width="2"/>
+  <circle cx="76" cy="112" r="13" fill="#16a34a"/>
+  <path d="M69 112 L74 117 L83 107" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="100" y="119" font-size="24" font-weight="700" fill="#ffffff">Valid</text>
+  <text x="560" y="118" font-size="15" fill="#86efac" text-anchor="end">hanya yang punya sumber</text>
+
+  <g class="r1">
+    <rect class="row" x="64" y="146" width="492" height="46" rx="12"/>
+    <text class="lbl" x="84" y="175">Cara reconnect integrasi GitHub</text>
+    <path d="M526 169 L531 174 L540 164" fill="none" stroke="#4ade80" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text class="tag" x="514" y="174" fill="#86efac" text-anchor="end">dokumentasi</text>
+  </g>
+  <g class="r2">
+    <rect class="row" x="64" y="204" width="492" height="46" rx="12"/>
+    <text class="lbl" x="84" y="233">Ada insiden di status page</text>
+    <path d="M526 227 L531 232 L540 222" fill="none" stroke="#4ade80" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text class="tag" x="514" y="232" fill="#86efac" text-anchor="end">status page</text>
+  </g>
+  <g class="r3v">
+    <rect class="row" x="64" y="262" width="492" height="46" rx="12" stroke-dasharray="6 6"/>
+    <text class="lbl" x="84" y="291">Biasanya hilang setelah reconnect</text>
+    <rect class="strike" x="84" y="285" width="286" height="2.5" rx="1.2" fill="#f87171"/>
+    <text class="tag" x="536" y="290" fill="#fca5a5" text-anchor="end">tanpa sumber, dibuang</text>
+  </g>
+  <g class="cap">
+    <text x="64" y="346" font-size="16" fill="#9fcdc6">Semua isinya bisa dicek orang lain.</text>
+  </g>
+
+  <!-- ===== panel Standard ===== -->
+  <rect x="620" y="80" width="540" height="290" rx="22" fill="#0a2523" stroke="#78350f" stroke-width="2"/>
+  <circle cx="656" cy="112" r="13" fill="#d97706"/>
+  <path d="M656 104 L656 114" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="656" cy="119" r="1.8" fill="#ffffff"/>
+  <text x="680" y="119" font-size="24" font-weight="700" fill="#ffffff">Standard</text>
+  <text x="1140" y="118" font-size="15" fill="#fcd34d" text-anchor="end">lengkap, yang belum pasti ditandai</text>
+
+  <g class="r1">
+    <rect class="row" x="644" y="146" width="492" height="46" rx="12"/>
+    <text class="lbl" x="664" y="175">Cara reconnect integrasi GitHub</text>
+    <path d="M1106 169 L1111 174 L1120 164" fill="none" stroke="#4ade80" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text class="tag" x="1094" y="174" fill="#86efac" text-anchor="end">dokumentasi</text>
+  </g>
+  <g class="r2">
+    <rect class="row" x="644" y="204" width="492" height="46" rx="12"/>
+    <text class="lbl" x="664" y="233">Ada insiden di status page</text>
+    <path d="M1106 227 L1111 232 L1120 222" fill="none" stroke="#4ade80" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text class="tag" x="1094" y="232" fill="#86efac" text-anchor="end">status page</text>
+  </g>
+  <g class="r3">
+    <rect class="row amber" x="644" y="262" width="492" height="46" rx="12" style="stroke:#fbbf24"/>
+    <text class="lbl" x="664" y="291">Biasanya hilang setelah reconnect</text>
+    <path d="M1102 295 L1112 276 L1122 295 Z" fill="none" stroke="#fbbf24" stroke-width="2.6" stroke-linejoin="round"/>
+    <text class="tag" x="1090" y="290" fill="#fde68a" text-anchor="end">belum terverifikasi</text>
+  </g>
+  <g class="cap">
+    <text x="644" y="346" font-size="16" fill="#9fcdc6">Cek dulu bagian bertanda sebelum posting.</text>
+  </g>
+
+  <!-- rekomendasi -->
+  <g class="reco">
+    <rect x="300" y="388" width="600" height="38" rx="19" fill="#ffffff" fill-opacity="0.07" stroke="#2dd4bf" stroke-width="1.6"/>
+    <text x="600" y="413" font-size="16" fill="#ccfbf1" text-anchor="middle">Rekomendasi: pakai Valid ramah praktis kalau mau aman</text>
+  </g>
+</svg>

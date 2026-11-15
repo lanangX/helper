@@ -1,0 +1,23 @@
+## Ringkasan
+
+<!-- Apa yang berubah dan kenapa. -->
+
+## Jenis perubahan
+
+- [ ] Perbaikan (patch)
+- [ ] Kemampuan baru (minor)
+- [ ] Perubahan format keluaran (major)
+- [ ] Dokumentasi, CI, atau skrip saja
+
+## Checklist
+
+- [ ] `SKILL.md` dan `adapters/compact-instructions.md` konsisten (format keluaran dan prinsip)
+- [ ] Jalur Valid tetap hanya memuat klaim terverifikasi
+- [ ] Kasus uji di `evals/` ditambah atau diperbarui, hasilnya dicatat di bawah
+- [ ] `CHANGELOG.md` diperbarui
+- [ ] Versi dinaikkan di kedua `plugin.json` (kalau ada rilis)
+- [ ] `./scripts/build.sh` lolos
+
+## Hasil uji
+
+<!-- Tempel ringkasan hasil kasus uji yang dijalankan: kasus, lolos atau tidak, catatan. -->

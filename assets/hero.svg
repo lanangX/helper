@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="t d">
+  <title id="t">helper</title>
+  <desc id="d">Animasi judul helper diketik, dengan tanda centang yang tergambar dan tiga label: Valid, Standard, Rekomendasi.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#062f2c"/>
+      <stop offset="1" stop-color="#0f766e"/>
+    </linearGradient>
+    <clipPath id="typeClip">
+      <rect x="258" y="70" width="0" height="90">
+        <animate attributeName="width" dur="9s" repeatCount="indefinite"
+                 values="0;0;300;300;300" keyTimes="0;0.04;0.30;0.94;1"/>
+      </rect>
+    </clipPath>
+  </defs>
+  <style>
+    text { font-family: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif; }
+    .float  { animation: float 4s ease-in-out infinite; }
+    .check  { stroke-dasharray: 100; stroke-dashoffset: 0; animation: draw 9s ease-in-out infinite; }
+    .caret  { animation: blink 1s steps(1) infinite; }
+    .sub    { animation: rise 9s ease-out infinite; }
+    .tags   { animation: rise2 9s ease-out infinite; }
+    .p1     { animation: pill1 9s ease-out infinite; }
+    .p2     { animation: pill2 9s ease-out infinite; }
+    .p3     { animation: pill3 9s ease-out infinite; }
+    .orb    { animation: drift 12s ease-in-out infinite; }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+    @keyframes draw  { 0%,6% { stroke-dashoffset: 100; } 22%,94% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: 100; } }
+    @keyframes blink { 50% { opacity: 0; } }
+    @keyframes rise  { 0%,30% { opacity: 0; transform: translateY(8px); } 38%,92% { opacity: 1; transform: none; } 100% { opacity: 0; } }
+    @keyframes rise2 { 0%,52% { opacity: 0; } 60%,92% { opacity: 1; } 100% { opacity: 0; } }
+    @keyframes pill1 { 0%,30% { opacity: 0; transform: translateX(30px); } 37%,92% { opacity: 1; transform: none; } 100% { opacity: 0; } }
+    @keyframes pill2 { 0%,36% { opacity: 0; transform: translateX(30px); } 43%,92% { opacity: 1; transform: none; } 100% { opacity: 0; } }
+    @keyframes pill3 { 0%,42% { opacity: 0; transform: translateX(30px); } 49%,92% { opacity: 1; transform: none; } 100% { opacity: 0; } }
+    @keyframes drift { 0%,100% { transform: translate(0,0); } 50% { transform: translate(-14px,10px); } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+
+  <rect width="1200" height="300" rx="28" fill="url(#bg)"/>
+  <circle class="orb" cx="1110" cy="268" r="92" fill="#5eead4" opacity="0.07"/>
+  <circle class="orb" cx="180" cy="20" r="70" fill="#5eead4" opacity="0.06"/>
+
+  <!-- ikon -->
+  <g transform="translate(62,66)">
+    <g class="float">
+      <rect x="0" y="0" width="160" height="112" rx="28" fill="#ffffff"/>
+      <polygon points="30,104 30,152 78,106" fill="#ffffff"/>
+      <path class="check" pathLength="100" d="M42 58 L72 84 L120 34"
+            fill="none" stroke="#0f766e" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+
+  <!-- judul diketik -->
+  <text x="260" y="132" font-size="56" font-weight="700" fill="#ffffff"
+        textLength="296" lengthAdjust="spacingAndGlyphs" clip-path="url(#typeClip)">helper</text>
+  <rect class="caret" y="84" width="4" height="58" rx="2" fill="#5eead4">
+    <animate attributeName="x" dur="9s" repeatCount="indefinite"
+             values="260;260;556;556;556" keyTimes="0;0.04;0.30;0.94;1"/>
+  </rect>
+
+  <g class="sub">
+    <text x="260" y="186" font-size="21" fill="#99f6e4">Dua skill untuk developer yang aktif di komunitas online.</text>
+    <text x="260" y="218" font-size="18" fill="#5eead4" opacity="0.85">discussion-helper menjawab · content-helper membuat konten</text>
+  </g>
+  <text class="tags" x="260" y="266" font-size="16" fill="#5eead4" opacity="0.9">GitHub · Discord · Reddit · Quora · LinkedIn · Threads · Instagram · TikTok</text>
+
+  <!-- label -->
+  <g class="p1">
+    <rect x="900" y="58" width="250" height="46" rx="23" fill="#22c55e" fill-opacity="0.2" stroke="#4ade80" stroke-width="2"/>
+    <path d="M928 82 L936 90 L950 74" fill="none" stroke="#4ade80" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="968" y="88" font-size="21" font-weight="600" fill="#ffffff">Valid</text>
+    <text x="1130" y="88" font-size="14" fill="#bbf7d0" text-anchor="end">terverifikasi</text>
+  </g>
+  <g class="p2">
+    <rect x="900" y="118" width="250" height="46" rx="23" fill="#fbbf24" fill-opacity="0.14" stroke="#fbbf24" stroke-width="2"/>
+    <path d="M940 74 L951 94 L929 94 Z" transform="translate(0,48)" fill="none" stroke="#fbbf24" stroke-width="3" stroke-linejoin="round"/>
+    <text x="968" y="148" font-size="21" font-weight="600" fill="#ffffff">Standard</text>
+    <text x="1130" y="148" font-size="14" fill="#fde68a" text-anchor="end">lengkap</text>
+  </g>
+  <g class="p3">
+    <rect x="900" y="178" width="250" height="46" rx="23" fill="#ffffff" fill-opacity="0.08" stroke="#e2e8f0" stroke-width="2"/>
+    <circle cx="940" cy="201" r="7" fill="none" stroke="#e2e8f0" stroke-width="3"/>
+    <circle cx="940" cy="201" r="2.5" fill="#e2e8f0"/>
+    <text x="968" y="208" font-size="21" font-weight="600" fill="#ffffff">Rekomendasi</text>
+  </g>
+</svg>

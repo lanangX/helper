@@ -1,0 +1,6 @@
+{
+  "name": "helper",
+  "version": "1.0.0",
+  "description": "Dua skill untuk developer yang aktif di komunitas online: discussion-helper menyusun balasan, content-helper membuat konten.",
+  "skills": "./skills/"
+}

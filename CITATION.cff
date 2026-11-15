@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "Jika Anda memakai repo ini, mohon kutip seperti di bawah."
+title: "helper: discussion-helper dan content-helper"
+type: software
+version: 1.0.0
+date-released: 2026-11-15
+license: MIT
+repository-code: "https://github.com/lanangX/helper"
+url: "https://www.pawang.dev/"
+authors:
+  - name: "Pawang Dev"
+abstract: "Dua skill AI (format SKILL.md) untuk developer yang aktif di komunitas online. discussion-helper menyusun balasan, content-helper membuat konten. Keduanya memisahkan klaim terverifikasi (Valid) dari yang belum (Standard)."
+keywords:
+  - agent-skills
+  - claude-code
+  - community
+  - content-writing

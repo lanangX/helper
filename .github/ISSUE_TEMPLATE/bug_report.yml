@@ -1,0 +1,51 @@
+name: Laporan bug
+description: Skill menghasilkan jawaban yang salah, melanggar prinsip, atau gagal dipasang.
+labels: [bug]
+body:
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - Claude Code
+        - claude.ai / Claude Desktop
+        - Codex / ChatGPT
+        - Perplexity
+        - Gemini
+        - Lainnya
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Versi skill
+      description: Lihat `version` di plugin.json atau halaman Releases.
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: textarea
+    id: input
+    attributes:
+      label: Pertanyaan atau thread yang ditempel
+      description: Hapus data pribadi dan rahasia sebelum menempel.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Apa yang terjadi
+      description: Tempel keluaran skill. Contoh masalah, label Valid dipakai untuk klaim yang tidak punya sumber.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Apa yang seharusnya terjadi
+    validations:
+      required: true
+  - type: checkboxes
+    id: search
+    attributes:
+      label: Pencarian web
+      options:
+        - label: Pencarian web aktif di sesi ini

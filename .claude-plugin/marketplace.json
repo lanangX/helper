@@ -1,0 +1,15 @@
+{
+  "name": "helper",
+  "description": "Skill dan plugin buatan Pawang Dev untuk membantu developer aktif dan berkualitas di komunitas online.",
+  "owner": {
+    "name": "Pawang Dev"
+  },
+  "plugins": [
+    {
+      "name": "helper",
+      "source": "./",
+      "description": "Dua skill: discussion-helper (menyusun balasan) dan content-helper (membuat konten), masing-masing dengan jalur Valid dan Standard.",
+      "category": "productivity"
+    }
+  ]
+}
