@@ -33,3 +33,22 @@ Repo publik `helper`: marketplace berisi dua skill untuk developer yang aktif di
 - Nama plugin (`helper`) harus sama di kedua `marketplace.json` dan kedua `plugin.json`. Jangan pakai awalan `claude-`, `anthropic-`, atau `cc-plugin-`, karena ditolak validator Claude.
 - URL repo memakai `lanangX/helper`. Jangan menaruh placeholder `OWNER` kembali, CI menolaknya.
 - Klaim cara pasang di platform lain harus bisa ditelusuri ke dokumentasi resmi. Yang belum diuji ditulis "belum diuji".
+
+## Review guidelines
+
+- Treat any claim from memory in the Valid track (`skills/*/SKILL.md`,
+  `adapters/*.md`) as P1. Valid output may only contain claims backed by a
+  source read in that session.
+- Flag mismatched output format (Valid, Standard, two styles, Rekomendasi,
+  Catatan) between `SKILL.md`, its adapter, and `README.md`.
+- Flag version mismatches between `.claude-plugin/plugin.json`,
+  `.codex-plugin/plugin.json`, and `CHANGELOG.md`.
+- Flag plugin name drift (`helper` must match in both `marketplace.json` and
+  both `plugin.json`) and forbidden prefixes (`claude-`, `anthropic-`, `cc-plugin-`).
+- Flag any `OWNER` placeholder; the repo URL must be `lanangX/helper`.
+- Install claims for other platforms must trace to official docs; otherwise
+  they must say "belum diuji".
+- In `scripts/build.sh` and `.github/workflows/`, flag unquoted variables,
+  command injection via untrusted input (PR/issue titles, branch names),
+  overly broad `permissions`, unpinned third-party actions, and secrets exposure.
+- Do not comment on wording style or SVG cosmetics.
