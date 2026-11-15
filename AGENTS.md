@@ -37,7 +37,7 @@ Repo publik `helper`: marketplace berisi dua skill untuk developer yang aktif di
 ## Review guidelines
 
 - Treat any claim from memory in the Valid track (`skills/*/SKILL.md`,
-  `adapters/*.md`) as a high-priority review findin. Valid output may only contain claims backed by a
+  `adapters/*.md`) as a high-priority review finding. Valid output may only contain claims backed by a
   source read in that session.
 - Flag mismatched output format (Valid, Standard, two styles, Rekomendasi,
   Catatan) between `SKILL.md`, its adapter, and `README.md`.
